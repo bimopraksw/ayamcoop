@@ -255,9 +255,10 @@ def fetch_and_print_user_data(auth, index):
             
             if chicken_percentage >= 90:
                 upgrade_laboratory(auth,"laboratory.regular.farmCapacity")
-                
+
             if ready_upgrade == True:
                 upgrade_farm(auth)
+            # Check if the result is different from the previous one
             if previous_results.get(index) != result:
                 previous_results[index] = result
                 # Sell eggs only if the quantity is more than 1000
